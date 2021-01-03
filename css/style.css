@@ -1,0 +1,118 @@
+.row {
+    margin-top: 40px;
+}
+
+/* style sticky notes */
+.sticky-group {
+    width: 100%;
+}
+
+.sticky {
+    position: relative;
+    display: inline-block;
+    width: 33%;
+    margin: 10px 0 40px 0px;
+    padding: 30px;
+    color: #000000;
+    text-align: center;
+    font-family: Open Sans;
+    font-size: 16px;
+}
+
+.content {
+    max-height: 8rem;
+    overflow-y: scroll;
+    scrollbar-width: 0;
+}
+
+/* style scroll */
+.content::-webkit-scrollbar {
+    width: 3px;
+}
+
+.content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.sticky::before {
+    content: ' ';
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background: linear-gradient(to bottom, transparent 0%, #13131333 100%);
+    ;
+    width: 30px;
+    height: 2px;
+    transform: rotate(180deg)
+}
+
+.yellow {
+    position: relative;
+    background: linear-gradient(to left bottom, transparent 50%, #f9df95 0) no-repeat 100% 0 / 30px 30px,
+        linear-gradient(-135deg, transparent 21px, #ffc20ebf 0);
+}
+
+.yellow::after {
+    content: ' ';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background: url(../img/lamp.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: 1px;
+    right: 0px;
+    cursor: pointer;
+}
+
+.blue {
+    background: linear-gradient(to left bottom, transparent 50%, #89d6ef 0) no-repeat 100% 0 / 30px 30px,
+        linear-gradient(-135deg, transparent 21px, #00abe1bf 0);
+}
+
+.blue::after {
+    content: ' ';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background: url(../img/pen.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: 1px;
+    right: 0px;
+    cursor: pointer;
+}
+
+.red {
+    background: linear-gradient(to left bottom, transparent 50%, #ff9f9f 0) no-repeat 100% 0 / 30px 30px,
+        linear-gradient(-135deg, transparent 21px, #fb2222bf 0);
+}
+
+.red::after {
+    content: ' ';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background: url(../img/question.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: 1px;
+    right: 0px;
+    cursor: pointer;
+}
+
+.link__info {
+    color: teal;
+    margin-right: 15px;
+}
